@@ -1,0 +1,52 @@
+<%= form_with model: [:admin, resort] do |f| %>
+    <div>
+      <%= f.label :image, '商品画像' %>
+    </div>
+    <div>
+      <%= f.file_field :image, accept: "image/*" %>
+    </div>
+
+    <div>
+      <%= f.label :name, 'スキー場名' %>
+    </div>
+    <div>
+      <%= f.text_field :name, placeholder: 'スキー場名' %>
+    </div>
+
+    <div>
+      <%= f.label :feature, '特徴' %>
+    </div>
+    <div>
+      <%= f.text_area :feature %>
+    </div>
+
+    <div>
+      <!--%= f.label :prefecture_id, '都道府県' %>-->
+    </div>
+    <div>
+      <!--%= f.select :prefecture_id, prefecture.map{ |prefecture| [prefecture.name, prefecture.id]}, { include_blank: '-- 選択してください --'} %>-->
+    </div>
+
+    <div>
+      <%= f.label :postal_code, '郵便番号' %>
+    </div>
+    <div>
+      <%= f.text_field :postal_code %>
+    </div>
+
+    <div>
+      <%= f.label :address, '住所' %>
+    </div>
+    <div>
+      <%= f.text_area :address %>
+    </div>
+
+  <div>
+    <% if Resort.exists?(resort.id) %>
+      <%= f.submit '変更を保存する' %>
+      <%= link_to "削除する", admin_resort_path(@resort.id), method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
+    <% else %>
+      <%= f.submit '新規登録' %>
+    <% end %>
+  </div>
+<% end %>

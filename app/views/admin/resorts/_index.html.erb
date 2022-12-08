@@ -2,20 +2,21 @@
   <thead>
     <tr>
       <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>スキー場名</th>
+      <th>特徴</th>
     </tr>
   </thead>
   <tbody>
-    <% resorts do |resort| %>
+    <% resorts.each do |resort| %>
     <tr>
       <td><%= resort.id %></td>
       <td>
         <%= link_to resort.name, admin_resort_path(resort.id) %>
       </td>
-      <td></td>
-      <td></td>
+      <td><%= resort.feature %></td>
     </tr>
+    <% end %>
   </tbody>
 </table>
+
+<%= link_to "新規追加", new_admin_resort_path %>

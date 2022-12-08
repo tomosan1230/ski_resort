@@ -3,4 +3,13 @@ class Member < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_many :reviews, dependent: :destroy
+
+  with_options presence: true do
+    validates :nick_name
+    validates :email
+    validates :encrypted_password
+  end
+
 end
