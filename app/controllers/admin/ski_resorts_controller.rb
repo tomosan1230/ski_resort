@@ -1,4 +1,4 @@
-class Admin::ResortsController < ApplicationController
+class Admin::SkiResortsController < ApplicationController
   def index
   end
 
