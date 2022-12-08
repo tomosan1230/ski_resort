@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     resources :reviews, only:[:index, :show, :destroy]
     resources :members, only:[:index, :show, :edit, :update]
     resources :prefectures, only:[:index, :edit, :create, :update]
-    resources :ski_resorts, only:[:index, :new, :show, :edit, :update, :destroy]
+    resources :resorts, only:[:index, :new, :create, :show, :edit, :update, :destroy]
   end
 
 end
