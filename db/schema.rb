@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_06_071100) do
+ActiveRecord::Schema.define(version: 2022_12_08_051739) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -36,6 +36,33 @@ ActiveRecord::Schema.define(version: 2022_12_06_071100) do
     t.boolean "is_deleted", default: false
     t.index ["email"], name: "index_members_on_email", unique: true
     t.index ["reset_password_token"], name: "index_members_on_reset_password_token", unique: true
+  end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "resorts", force: :cascade do |t|
+    t.integer "member_id"
+    t.integer "prefecture"
+    t.string "name", null: false
+    t.string "postal_code", null: false
+    t.string "address", null: false
+    t.text "feature", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "member_id"
+    t.integer "resort_id"
+    t.string "title", null: false
+    t.text "body", null: false
+    t.date "the_day", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

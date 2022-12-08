@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: "homes#top"
     get '/about' => "homes#about"
-    resources :ski_resorts, only:[:index, :show]
+    resources :resorts, only:[:index, :show]
     resources :members, only:[:show, :edit] do
       collection do
         get "unsubscribe"
