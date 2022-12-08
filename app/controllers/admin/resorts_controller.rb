@@ -1,4 +1,4 @@
-class Admin::SkiResortsController < ApplicationController
+class Admin::ResortsController < ApplicationController
   def index
     @ski_resorts = SkiResort.all
   end

@@ -8,11 +8,11 @@
     </tr>
   </thead>
   <tbody>
-    <% ski_resorts do |ski_resort| %>
+    <% resorts do |resort| %>
     <tr>
-      <td><%= ski_resort.id %></td>
+      <td><%= resort.id %></td>
       <td>
-        <%= link_to ski_resort.name, admin_ski_resort_path(ski_resort.id) %>
+        <%= link_to resort.name, admin_resort_path(resort.id) %>
       </td>
       <td></td>
       <td></td>
