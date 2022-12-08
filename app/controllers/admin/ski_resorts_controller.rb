@@ -1,5 +1,6 @@
 class Admin::SkiResortsController < ApplicationController
   def index
+    @ski_resorts = SkiResort.all
   end
 
   def new
@@ -10,4 +11,9 @@ class Admin::SkiResortsController < ApplicationController
 
   def edit
   end
+  
+  private
+  
+  def ski_resort_params
+  
 end
