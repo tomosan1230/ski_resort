@@ -13,9 +13,10 @@ Rails.application.routes.draw do
     root to: "homes#top"
     get '/about' => "homes#about"
     resources :resorts, only:[:index, :show]
-    resources :members, only:[:show, :edit] do
+    resources :members, only:[:show, :edit, :update] do
       collection do
         get "unsubscribe"
+        patch "withdraw"
       end
     end
     resources :reviews, only:[:index, :edit, :create, :update, :destroy]

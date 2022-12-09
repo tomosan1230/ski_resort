@@ -1,2 +1,32 @@
-<h1>Admin::Members#show</h1>
-<p>Find me in app/views/admin/members/show.html.erb</p>
+<h4 class="mb-4"><%= @member.nick_name %>さんの会員詳細</h4>
+<table>
+  <tr>
+	  <td>会員ID</td>
+	  <td><%= @member.id %></td>
+  </tr>
+  <tr>
+	  <td>ニックネーム</td>
+	  <td><%= @member.nick_name %></td>
+  </tr>
+  <tr>
+    <td>メールアドレス</td>
+    <td><%= @member.email %></td>
+  </tr>
+  <tr>
+	  <td>会員ステータス</td>
+	  <td>
+	    <% if @member.is_deleted == false %>
+        <strong>有効</strong>
+      <% elsif %>
+        <strong>退会済</strong>
+      <% end %>
+	  </td>
+  </tr>
+  <tr>
+	  <td></td>
+	  <td>
+	    <%= link_to "編集する", edit_admin_member_path %>
+	    <%= link_to "レビュー一覧", admin_reviews_path %>
+	  </td>
+  </tr>
+</table>
