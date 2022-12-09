@@ -1,2 +1,32 @@
-<h1>Admin::Prefectures#index</h1>
-<p>Find me in app/views/admin/prefectures/index.html.erb</p>
+<h3 class="col-3 text-center">都道府県一覧・追加</h3>
+  <%= form_with model: [:admin, @prefecture], local: true do |f| %>
+    <div>都道府県名</div>
+    <div>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: '都道府県名' %>
+    </div>
+    <div>
+      <%= f.submit "新規登録" %>
+    </div>
+  <% end %>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>都道府県</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prefectures.each do |prefecture| %>
+    <tr>
+      <td>
+        <%= prefecture.name %>
+      </td>
+      <td>
+        <%= link_to "編集する", edit_admin_prefecture_path(prefecture.id), class: "btn btn-success" %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
