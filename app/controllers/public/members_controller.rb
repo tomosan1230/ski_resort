@@ -31,12 +31,10 @@ class Public::MembersController < ApplicationController
     redirect_to root_path
   end
 
-
-
-
   private
 
   def member_params
-    params.require(:member).permit(:first_name, :last_name, :first_name_kana, :last_name_kana, :address, :telephone_number, :postal_code, :email)
+    params.require(:member).permit(:nick_name, :email)
   end
+
 end

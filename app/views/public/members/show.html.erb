@@ -1,2 +1,27 @@
-<h1>Public::Members#show</h1>
-<p>Find me in app/views/public/members/show.html.erb</p>
+<div>
+  <h4>マイページ</h4>
+</div>
+
+<div>
+  <h4>登録情報</h4>
+</div>
+<div>
+  <%= link_to "編集する", edit_member_path %>
+</div>
+  <table>
+    <tr>
+      <td>ニックネーム</td>
+      <td><%= @member.nick_name %></td>
+    </tr>
+    <tr>
+      <td>メールアドレス</td>
+      <td><%= @member.email %></td>
+    </tr>
+  </table>
+
+<div>
+  <h4>レビュー</h4>
+</div>
+<div>
+  <%= link_to "一覧を見る", reviews_path, class: "btn btn-primary px-4" %>
+</div>
