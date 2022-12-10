@@ -11,5 +11,9 @@ class Member < ApplicationRecord
     validates :email
     validates :encrypted_password
   end
+  
+  def active_for_authentication?
+    super && (is_deleted == false)
+  end
 
 end

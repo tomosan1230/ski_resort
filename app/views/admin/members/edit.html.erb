@@ -1,2 +1,27 @@
-<h1>Admin::Members#edit</h1>
-<p>Find me in app/views/admin/members/edit.html.erb</p>
+<h4><%= @member.nick_name %>さんの会員情報編集</h4>
+
+<%= form_with model: @member, url: admin_member_path(@member.id), method: :patch do |f| %>
+<table>
+  <tr>
+    <td>ニックネーム</td>
+    <td><%= f.text_field :nick_name, autofocus: true %></td>
+  </tr>
+  <tr>
+    <td>メールアドレス</td>
+    <td><%= f.email_field :email %></td>
+  </tr>
+  <tr>
+    <td>会員ステータス</td>
+    <td>
+      <%= f.radio_button :is_deleted, 'false' %>
+      <%= f.label :is_deleted, '有効' %>
+      <%= f.radio_button :is_deleted, 'true' %>
+      <%= f.label :is_deleted, '退会' %>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2"><%= f.submit "変更を保存" %></td>
+  </tr>
+</table>
+<% end %>
