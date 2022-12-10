@@ -1,6 +1,6 @@
 class Public::ResortsController < ApplicationController
   def index
-    @resort = Resort.all
+    @resorts = Resort.all
     @prefectures = Prefecture.all
   end
 
