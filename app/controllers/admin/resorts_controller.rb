@@ -2,7 +2,7 @@ class Admin::ResortsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @resorts = Resort.all
+    @resorts = Resort.page(params[:page]).per(5)
   end
 
   def new
