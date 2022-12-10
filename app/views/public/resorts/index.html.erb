@@ -1,8 +1,17 @@
-<!--<div>-->
-<!--  %= render 'genre', genres: @genres %>-->
-<!--</div>-->
-<div>
-  <h3>商品一覧</h3>
-  <p>(全<%= @resorts.count %>件)</p>
-</div>
-<%= render 'index', resorts: @resorts %>
+<div class="row">
+  <!--<div class="col-2">-->
+  <!--  %= render 'genre', genres: @genres %>-->
+  <!--</div>-->
+  <div class="col-10">
+    <div class="d-flex flex-row">
+      <h3>スキー場一覧</h3>
+      <p class="d-flex align-resorts-end m-2">(全<%= @resorts.count %>件)</p>
+    </div>
+    <%= render 'index', resorts: @resorts %>
+    <div class="row">
+      <div class="col-11 d-flex justify-content-center">
+        <%= paginate @resorts %>
+      </div>
+    </div>
+  </div>
+</div

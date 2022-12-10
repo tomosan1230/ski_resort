@@ -1,12 +1,13 @@
-
+<div class="d-flex flex-wrap">
   <% resorts.each do |resort| %>
     <%= link_to resort_path(resort.id) do %>
-
-      <div>
+    <div class="m-2">
+      <div class="mb-2">
         <%= image_tag resort.image, size: '200x120' %>
       </div>
-      <p><strong><%= resort.name %></strong></p>
-      <p><strong><%= resort.feature %></strong></p>
-
+      <p class="text-dark"><strong><%= resort.name %></strong></p>
+      <p class="text-dark"><strong><%= resort.feature %></strong></p>
+    </div>
     <% end %>
   <% end %>
+</div>

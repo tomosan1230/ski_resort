@@ -1,14 +1,15 @@
-<!--<div>-->
-<!--  %= render 'genre', genres: @genres %>-->
-<!--</div>-->
+<div class="row mt-5 pb-5">
+  <!--<div class="col-2">-->
+  <!--  %= render 'genre', genres: @genres %>-->
+  <!--</div>-->
+  <div class="col-4 text-center"><%= image_tag @resort.image, size: '270x170' %></div>
+  <div class="col-6">
+    <h3 class="m-2"><%= @resort.name %></h3>
+    <h5 class="m-2" style="height:6rem;"><%= @resort.feature %></h5>
+    <div class="mb-4">
+      <h4 class="m-2"><%= @resort.postal_code %></h4>
+      <div class="m-2"><%= @resort.address %></div>
+    </div>
 
-<div><%= image_tag @resort.image, size: '270x170' %></div>
-<div>
-  <h3><%= @resort.name %></h3>
-  <h5><%= @resort.feature %></h5>
-  <div>
-    <h4><%= @resort.postal_code %></h4>
-    <h4><%= @resort.address %></h4>
   </div>
-  
-
+</div>
