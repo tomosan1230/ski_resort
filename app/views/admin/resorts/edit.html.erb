@@ -1,2 +1,6 @@
-<h3>スキー場編集</h3>
-<%= render 'form', resort: @resort %>
+<!--%= render 'layouts/errors', obj: @resort %>-->
+
+<div class="row mb-4">
+  <h3 class="col-2 text-center">スキー場編集</h3>
+</div>
+<%= render 'form', resort: @resort, prefectures: Prefecture.all %>

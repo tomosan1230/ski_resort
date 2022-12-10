@@ -1,22 +1,22 @@
-<table>
-  <thead>
+<table class="table table-borderless border-top border-bottom">
+  <thead class="bg-light">
     <tr>
-      <th></th>
+      <th>スキー場ID</th>
       <th>スキー場名</th>
       <th>特徴</th>
+      <th>都道府県</th>
     </tr>
   </thead>
   <tbody>
     <% resorts.each do |resort| %>
-    <tr>
-      <td><%= resort.id %></td>
-      <td>
-        <%= link_to resort.name, admin_resort_path(resort.id) %>
-      </td>
-      <td><%= resort.feature %></td>
-    </tr>
+      <tr>
+        <td><%= resort.id %></td>
+        <td>
+          <%= link_to resort.name, admin_resort_path(resort.id), class: 'text-decoration-underline' %>
+        </td>
+        <td><%= resort.feature %></td>
+        <td><%= resort.prefecture.name %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to "新規追加", new_admin_resort_path %>

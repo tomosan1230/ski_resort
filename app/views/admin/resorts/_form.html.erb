@@ -1,52 +1,72 @@
+<div class="row">
+  <div class="col-12">
 <%= form_with model: [:admin, resort] do |f| %>
-    <div>
-      <%= f.label :image, '商品画像' %>
+  <div class="row mb-2">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <%= f.label :image, 'スキー場画像' %>
     </div>
-    <div>
+    <div class="col-5">
       <%= f.file_field :image, accept: "image/*" %>
     </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <%= f.label :name, 'スキー場名', class: "col-form-label" %>
+    </div>
+    <div class="col-5">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <%= f.label :feature, '特徴', class: 'col-form-label' %>
+    </div>
+    <div class="col-5">
+      <%= f.text_area :feature, class: 'form-control', style: "height:8rem;", placeholder: 'ここに説明文を記述します' %>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <%= f.label :prefecture_id, '都道府県', class: "col-form-label" %>
+    </div>
+    <div class="col-5">
+      <%= f.select :prefecture_id, prefectures.map{ |prefecture| [prefecture.name, prefecture.id]}, { include_blank: '-- 選択してください --'}, class: 'form-control'  %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <%= f.label :postal_code, '郵便番号', class: "col-form-label" %>
+    </div>
+    <div class="col-5">
+      <%= f.text_field :postal_code, class: 'form-control' %>
+    </div>
+  </div>
 
-    <div>
-      <%= f.label :name, 'スキー場名' %>
+  <div class="row mb-2">
+    <div class="col-2"></div>
+    <div class="col-2">
+      <%= f.label :address, '住所', class: "col-form-label", placeholder: '市区町村･番地･建物名' %>
     </div>
-    <div>
-      <%= f.text_field :name, placeholder: 'スキー場名' %>
+    <div class="col-5">
+      <%= f.text_field :address, class: 'form-control' %>
     </div>
+  </div>
 
-    <div>
-      <%= f.label :feature, '特徴' %>
-    </div>
-    <div>
-      <%= f.text_area :feature %>
-    </div>
-
-    <div>
-      <!--%= f.label :prefecture_id, '都道府県' %>-->
-    </div>
-    <div>
-      <!--%= f.select :prefecture_id, prefecture.map{ |prefecture| [prefecture.name, prefecture.id]}, { include_blank: '-- 選択してください --'} %>-->
-    </div>
-
-    <div>
-      <%= f.label :postal_code, '郵便番号' %>
-    </div>
-    <div>
-      <%= f.text_field :postal_code %>
-    </div>
-
-    <div>
-      <%= f.label :address, '住所' %>
-    </div>
-    <div>
-      <%= f.text_area :address %>
-    </div>
-
-  <div>
+  <div class="row">
+    <div class="col-4"></div>
+  <div class="col-5 text-center">
     <% if Resort.exists?(resort.id) %>
-      <%= f.submit '変更を保存する' %>
-      <%= link_to "削除する", admin_resort_path(@resort.id), method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
+      <%= f.submit '変更を保存する', class: 'btn btn-success' %>
     <% else %>
-      <%= f.submit '新規登録' %>
+      <%= f.submit '新規登録', class: 'btn btn-success' %>
     <% end %>
   </div>
 <% end %>
+</div>
+</div>
+</div>

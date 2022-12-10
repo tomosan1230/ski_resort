@@ -1,19 +1,37 @@
-<h3>スキー場詳細</h3>
-<div>
-  <%= image_tag @resort.image, size: '250x150' %>
+<div class="row mb-4">
+  <h3 class="col-2 text-center">商品詳細</h3>
 </div>
-<div>
-  <p>商品名</p>
-  <h5><%= @resort.name %></h5>
-</div>
-<div>
-  <p>特徴</p>
-  <h5><%= @resort.feature %></h5>
-</div>
-<div>
-  <p>住所</p>
-  <h5><%= @resort.address %></h5>
-</div>
-<div>
-  <%= link_to '編集する', edit_admin_resort_path(@resort.id), class: 'btn btn-success btn-lg' %>
+<div class="row">
+  <div class="col-4">
+    <%= image_tag @resort.image, size: '250x150' %>
+  </div>
+  <div class="col-8">
+    <div class="d-flex flex-row">
+      <p class="col-4">スキー場名</p>
+      <h5><%= @resort.name %></h5>
+    </div>
+    <div class="d-flex flex-row">
+      <p class="col-4">特徴</p>
+      <h5><%= @resort.feature %></h5>
+    </div>
+    <div class="d-flex flex-row">
+      <p class="col-4">都道府県</p>
+      <h5><%= @resort.prefecture.name %></h5>
+    </div>
+    <div class="d-flex flex-row">
+      <p class="col-4">郵便番号</p>
+      <h5><%= @resort.postal_code %></h5>
+    </div>
+    <div class="d-flex flex-row">
+      <p class="col-4">住所</p>
+      <h5><%= @resort.address %></h5>
+    </div>
+
+
+    <div class="col mt-3 d-flex flex-row">
+
+      <%= link_to '編集する', edit_admin_resort_path(@resort.id), class: 'btn btn-success btn-lg mr-5' %>
+      <%= link_to "削除する", admin_resort_path(@resort.id), class: "btn btn-danger btn-lg", method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
+    </div>
+  </div>
 </div>

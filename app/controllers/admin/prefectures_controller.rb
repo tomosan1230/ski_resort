@@ -11,6 +11,7 @@ class Admin::PrefecturesController < ApplicationController
     if @prefecture.save
       redirect_to admin_prefectures_path, notice: '内容を保存しました'
     else
+      flash[:notice] = "保存できませんでした"
       @prefectures = Prefecture.all
       render :index
     end
@@ -25,8 +26,15 @@ class Admin::PrefecturesController < ApplicationController
     if @prefecture.update(prefecture_params)
       redirect_to admin_prefectures_path, notice: '内容を保存しました'
     else
+      flash[:notice] = "保存できませんでした"
       render :edit
     end
+  end
+
+  def destroy
+    @prefecture = Prefecture.find(params[:id])
+    @prefecture.destroy
+    redirect_to admin_prefectures_path, notice: '削除しました'
   end
 
   private

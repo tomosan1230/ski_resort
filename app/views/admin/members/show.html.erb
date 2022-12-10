@@ -1,5 +1,5 @@
 <h4 class="mb-4"><%= @member.nick_name %>さんの会員詳細</h4>
-<table>
+<table class='table table-borderless'>
   <tr>
 	  <td>会員ID</td>
 	  <td><%= @member.id %></td>
@@ -16,17 +16,17 @@
 	  <td>会員ステータス</td>
 	  <td>
 	    <% if @member.is_deleted == false %>
-        <strong>有効</strong>
+        <span class="text-success"><strong>有効</strong></span>
       <% elsif %>
-        <strong>退会済</strong>
+        <span class="text-secondary"><strong>退会済</strong></span>
       <% end %>
 	  </td>
   </tr>
   <tr>
 	  <td></td>
 	  <td>
-	    <%= link_to "編集する", edit_admin_member_path %>
-	    <%= link_to "レビュー一覧", admin_reviews_path %>
+	    <%= link_to "編集する", edit_admin_member_path, class: "btn btn-success mr-5" %>
+	    <%= link_to "レビュー一覧", admin_reviews_path,class: 'btn btn-primary' %>
 	  </td>
   </tr>
 </table>
