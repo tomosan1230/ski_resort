@@ -1,7 +1,6 @@
-<h4>会員一覧</h4>
-
-<table>
-  <thead>
+<h4 class="mb-4">会員一覧</h4>
+<table class='table'>
+  <thead class="thead-light">
     <tr>
       <th>会員ID</th>
       <th>ニックネーム</th>
@@ -21,12 +20,15 @@
         <td><%= member.email %></td>
         <td>
           <% if member.is_deleted == false %>
-            <strong>有効</strong>
+            <span class="text-success"><strong>有効</strong></span>
           <% elsif %>
-            <strong>退会済</strong>
+            <span class="text-secondary"><strong>退会済</strong></span>
           <% end %>
         </td>
       </tr>
     <% end %>
   </tbody>
-</table
+</table>
+<div class="d-flex justify-content-center">
+  <%= paginate @members %>
+</div>
