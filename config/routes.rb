@@ -19,7 +19,7 @@ Rails.application.routes.draw do
         patch "withdraw"
       end
     end
-    resources :reviews, only:[:index, :edit, :create, :update, :destroy]
+    resources :reviews, only:[:index, :new, :edit, :create, :update, :destroy]
   end
 
   namespace :admin do
