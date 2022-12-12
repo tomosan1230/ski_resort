@@ -7,12 +7,11 @@ class Public::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.member_id = current_member.id
-    @review.resort_id = 
+    @review.resort_id = params[:resort_id]
     if @review.save
-      redirect_to ski_resort_path(@resort), notice: "You have created review successfully."
+      redirect_to resorts_path, notice: "You have created review successfully."
     else
-      @reviews = review.all
-      render 'index'
+      render 'new'
     end
   end
 
@@ -31,7 +30,7 @@ class Public::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:title, :body, :the_day, :star)
+    params.require(:review).permit(:title, :body, :the_day, :rate)
   end
 
 end

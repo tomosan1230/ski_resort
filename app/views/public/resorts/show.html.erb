@@ -11,7 +11,7 @@
       <div class="m-2"><%= @resort.address %></div>
     </div>
     <div class="mb-4">
-      <%= link_to "レビューを書く", new_review_path, class: "btn btn-success px-3" %>
+      <%= link_to "レビューを書く", new_resort_review_path(resort_id: @resort.id), class: "btn btn-success px-3" %>
     </div>
 
   </div>
