@@ -21,7 +21,7 @@ Rails.application.routes.draw do
         patch "withdraw"
       end
     end
-
+    get 'searches/search', as: :search
   end
 
   namespace :admin do
