@@ -18,13 +18,18 @@ class Public::ReviewsController < ApplicationController
 
 
   def index
+    @review = Review.find(params[:id])
   end
 
   def edit
+    @review = Review.find(params[:id])
   end
 
   def update
-
+    @review = Review.find(params[:id])
+    @review.member_id = current_member.id
+    @review.resort_id = params[:resort_id]
+    
   end
 
   private
