@@ -10,6 +10,13 @@
       <h4 class="m-2"><%= @resort.postal_code %></h4>
       <div class="m-2"><%= @resort.address %></div>
     </div>
+    <div class="mb-4">
+      <%= link_to "レビューを書く", new_resort_review_path(resort_id: @resort.id), class: "btn btn-success px-3" %>
+    </div>
 
   </div>
 </div>
+
+<!--<div class="row">-->
+<!--  %= render "rate", review: @review %>-->
+<!--</div>-->

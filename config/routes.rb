@@ -12,14 +12,16 @@ Rails.application.routes.draw do
   scope module: :public do
     root to: "homes#top"
     get '/about' => "homes#about"
-    resources :resorts, only:[:index, :show]
+    resources :resorts, only:[:index, :show] do
+      resources :reviews, only:[:index, :new, :edit, :create, :update, :destroy]
+    end
     resources :members, only:[:show, :edit, :update] do
       collection do
         get "unsubscribe"
         patch "withdraw"
       end
     end
-    resources :reviews, only:[:index, :edit, :create, :update, :destroy]
+
   end
 
   namespace :admin do

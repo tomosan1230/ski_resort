@@ -1,12 +1,11 @@
 class Public::ResortsController < ApplicationController
   def index
-    @resorts = Resort.page(params[:page]).per(1)
+    @resorts = Resort.page(params[:page]).per(2)
     @prefectures = Prefecture.all
   end
 
   def show
     @resort = Resort.find(params[:id])
-    @reviews = Review.all
   end
 
   private
