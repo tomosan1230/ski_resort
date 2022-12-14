@@ -1,2 +1,68 @@
-<h1>Public::Reviews#edit</h1>
-<p>Find me in app/views/public/reviews/edit.html.erb</p>
+<div class="row">
+  <div class="col-12 position-static">
+    <%= form_with model: @review, url: resort_reviews_path, method: :patch do |f| %>
+      <div class="row mb-2" id="star">
+        <div class="col-2"></div>
+        <div class="col-2">
+          <%= f.label :rate, '評価', class: "col-form-label" %>
+          <%= f.hidden_field :rate, id: :review_star, class:'form-control' %>
+        </div>
+
+        <div class="col-5 position-static" id="edit_rate_<%= @review.id %>"></div>
+      </div>
+
+    <div class="row mb-2">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <%= f.label :title, 'タイトル', class: "col-form-label" %>
+      </div>
+      <div class="col-5">
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <%= f.label :body, '内容', class: 'col-form-label' %>
+      </div>
+      <div class="col-5">
+        <%= f.text_area :body, class: 'form-control', style: "height:8rem;", placeholder: 'ここに説明文を記述します' %>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <%= f.label :the_day, '行った日付', class: "col-form-label" %>
+      </div>
+      <div class="col-5">
+        <%= f.date_field :the_day, class: 'form-control' %>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-5 text-center">
+        <%= f.submit '変更を保存する', class: 'btn btn-success' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  // $(document).on('turbolinks:load', function() {
+    var raty_<%= @review.id %> = document.getElementById('edit_rate_<%= @review.id %>');
+    edit_rate_<%= @review.id %>.innerHTML = ""
+    var option_<%= @review.id %> = {
+        starOn: "<%= asset_path('star-on.png') %>",
+        starOff: "<%= asset_path('star-off.png') %>",
+        starHalf: "<%= asset_path('star-half.png') %>",
+        score: <%= @review.rate %>
+        scoreName: 'review[rate]',
+        half: true
+      };
+    raty(raty_elem,option);
+  // });
+</script>

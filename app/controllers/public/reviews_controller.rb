@@ -2,6 +2,7 @@ class Public::ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+    @review.resort_id = params[:resort_id]
   end
 
   def create
@@ -18,7 +19,6 @@ class Public::ReviewsController < ApplicationController
 
 
   def index
-    @review = Review.find(params[:id])
   end
 
   def edit
@@ -29,7 +29,13 @@ class Public::ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.member_id = current_member.id
     @review.resort_id = params[:resort_id]
-    
+    if @review.update
+      redirect_to resorts_path, notice: "You have created review successfully."
+    else
+      render 'edit'
+    end
+
+
   end
 
   private
