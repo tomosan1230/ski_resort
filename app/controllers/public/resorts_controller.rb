@@ -7,6 +7,7 @@ class Public::ResortsController < ApplicationController
   def show
     @resort = Resort.find(params[:id])
     @prefectures = Prefecture.all
+    @reviews = @resort.reviews
   end
 
   private

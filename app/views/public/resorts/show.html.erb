@@ -1,9 +1,6 @@
-<div class="row mt-5 pb-5">
-  <!--<div class="col-2">-->
-  <!--  %= render 'genre', genres: @genres %>-->
-  <!--</div>-->
-  <div class="col-4 text-center"><%= image_tag @resort.image, size: '270x170' %></div>
-  <div class="col-6">
+<div class="row mb-5">
+  <div class="col-md-4 text-center"><%= image_tag @resort.image, class: 'img-fluid' %></div>
+  <div class="col-md-6">
     <h3 class="m-2"><%= @resort.name %></h3>
     <h5 class="m-2" style="height:6rem;"><%= @resort.feature %></h5>
     <div class="mb-4">
@@ -17,6 +14,44 @@
   </div>
 </div>
 
-<!--<div class="row">-->
-<!--  %= render "rate", review: @review %>-->
-<!--</div>-->
+<div class="row">
+    <div class="col">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+          <tr>
+            <th>投稿者</th>
+            <th>評価</th>
+            <th>タイトル</th>
+            <th>内容</th>
+            <th>行った日</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @reviews.each do |review| %>
+          <tr>
+            <td><%= review.member.nick_name %></td>
+            <td>
+              <%= render "public/reviews/rate", review: review %>
+            </td>
+            <td><%= review.title %></td>
+            <td>
+              <%= review.body %>
+            </td>
+            <td>
+              <%= review.the_day.strftime('%Y/%m/%d') %>
+            </td>
+
+            <% if review.member.id == current_member.id %>
+            <td class="text-center">
+            <%= link_to "編集する", edit_resort_review_path(review), class: "btn btn-success" %>
+            </td>
+            <% end %>
+          </tr>
+
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
