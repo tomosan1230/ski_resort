@@ -3,7 +3,11 @@
 </div>
 <div class="row">
   <div class="col-4">
-    <%= image_tag @resort.image, size: '250x150' %>
+    <% if @resort.image.present? %>
+      <%= image_tag @resort.image, size: '250x150' %>
+    <% else %>
+      <%= image_tag 'no_image.jpg' %>
+    <% end %>
   </div>
   <div class="col-8">
     <div class="d-flex flex-row">

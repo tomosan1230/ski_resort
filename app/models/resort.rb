@@ -3,7 +3,7 @@ class Resort < ApplicationRecord
   has_many :reviews
   has_one_attached :image
 
-  validates :image, presence: true
+
   validates :name, presence: true
   validates :feature, presence: true
   validates :postal_code, presence: true

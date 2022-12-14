@@ -3,7 +3,11 @@
     <%= link_to resort_path(resort.id) do %>
     <div class="m-2">
       <div class="col-md-4">
-        <%= image_tag resort.image, class: 'img-fluid' %>
+        <% if resort.image.present? %>
+          <%= image_tag resort.image, class: 'img-fluid' %>
+        <% else %>
+          <%= image_tag 'no_image.jpg' %>
+        <% end %>
       </div>
       <p class="text-dark"><strong><%= resort.name %></strong></p>
       <p class="text-dark"><strong><%= resort.feature %></strong></p>
