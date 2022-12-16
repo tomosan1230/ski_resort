@@ -1,41 +1,42 @@
 <div class="row mb-4">
-  <h3 class="col-2 text-center">商品詳細</h3>
+  <h3 class="col-md-2 text-center">商品詳細</h3>
 </div>
 <div class="row">
-  <div class="col-4">
+  <div class="col-md-4">
     <% if @resort.image.present? %>
-      <%= image_tag @resort.image, size: '250x150' %>
+      <%= image_tag @resort.image, class: "img-fluid" %>
     <% else %>
-      <%= image_tag 'no_image.jpg' %>
+      <%= image_tag 'no_image.jpg', class: "img-fluid" %>
     <% end %>
   </div>
-  <div class="col-8">
-    <div class="d-flex flex-row">
-      <p class="col-4">スキー場名</p>
-      <h5><%= @resort.name %></h5>
-    </div>
-    <div class="d-flex flex-row">
-      <p class="col-4">特徴</p>
-      <h5><%= @resort.feature %></h5>
-    </div>
-    <div class="d-flex flex-row">
-      <p class="col-4">都道府県</p>
-      <h5><%= @resort.prefecture.name %></h5>
-    </div>
-    <div class="d-flex flex-row">
-      <p class="col-4">郵便番号</p>
-      <h5><%= @resort.postal_code %></h5>
-    </div>
-    <div class="d-flex flex-row">
-      <p class="col-4">住所</p>
-      <h5><%= @resort.address %></h5>
-    </div>
 
-
-    <div class="col mt-3 d-flex flex-row">
+  <div class="col-md-8">
+    <table class="table">
+      <tr>
+        <th class="col-md-4">スキー場名</th>
+        <td><%= @resort.name %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">特徴</th>
+        <td><%= @resort.feature %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">都道府県</th>
+        <td><%= @resort.prefecture.name %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">郵便番号</th>
+        <td><%= @resort.postal_code %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">住所</th>
+        <td><%= @resort.address %></td>
+      </tr>
+      </table>
 
       <%= link_to '編集する', edit_admin_resort_path(@resort.id), class: 'btn btn-success btn-lg mr-5' %>
       <%= link_to "削除する", admin_resort_path(@resort.id), class: "btn btn-danger btn-lg", method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
+
     </div>
   </div>
 </div>
