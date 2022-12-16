@@ -7,11 +7,11 @@ class Member < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
   with_options presence: true do
-    validates :nick_name
+    validates :nick_name, length: { minimum: 2, maximum: 10 }
     validates :email
     validates :encrypted_password
   end
-  
+
   def active_for_authentication?
     super && (is_deleted == false)
   end

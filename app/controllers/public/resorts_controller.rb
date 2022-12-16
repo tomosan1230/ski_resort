@@ -1,4 +1,6 @@
 class Public::ResortsController < ApplicationController
+    before_action :authenticate_member!
+
   def index
     @resorts = Resort.page(params[:page]).per(6)
     @prefectures = Prefecture.all
