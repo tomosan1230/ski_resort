@@ -54,6 +54,7 @@
             <% if review.member.id == current_member.id %>
             <td class="text-center">
             <%= link_to "編集する", edit_resort_review_path(review), class: "btn btn-success" %>
+            <%= link_to "削除する", resort_review_path(review), method: :delete, class: "btn btn-danger", data: {confirm: "削除します。よろしいですか？"} %>
             </td>
             <% end %>
           </tr>
