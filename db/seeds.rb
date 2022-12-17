@@ -28,4 +28,10 @@ end
                 body: "000000#{n+1}",
                 the_day: "2022-12-1#{n}",
                 rate: "4")
+  Review.create(member_id: "1",
+                resort_id: "2",
+                title: "テスト#{n+1}",
+                body: "000000#{n+1}",
+                the_day: "2022-12-1#{n}",
+                rate: "3.5")
 end

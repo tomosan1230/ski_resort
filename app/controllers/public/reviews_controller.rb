@@ -1,6 +1,5 @@
 class Public::ReviewsController < ApplicationController
-    before_action :authenticate_member!
-  
+  before_action :authenticate_member!
 
   def new
     @review = Review.new
@@ -36,8 +35,17 @@ class Public::ReviewsController < ApplicationController
     else
       render 'edit'
     end
+  end
 
-
+  def destroy
+    @review = Review.find(params[:id])
+    @review.member_id = current_member.id
+    @review.resort_id = params[:resort_id]
+    if @review.destroy
+      redirect_to resort_path, notice: "You have created review successfully."
+    else
+      render 'show'
+    end
   end
 
   private
