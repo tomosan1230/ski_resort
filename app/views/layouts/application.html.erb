@@ -8,9 +8,10 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
   </head>
 
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100"  style="background: url('<%= asset_path('snow1.jpg') %>'); background-size: 100% 100%;">
     <%= render "layouts/header" %>
     <main>
       <p id="notice"><%= notice %></p>
