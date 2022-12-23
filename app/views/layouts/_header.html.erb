@@ -1,10 +1,14 @@
-<header class="border-bottom bg-header">
+<header class="border-bottom border-4 bg-header">
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <% if admin_signed_in? %>
-        <a class="col navbar-brand" href="/admin"><span>Snow</span></a>
+        <a class="col navbar-brand" href="/admin">
+          <img width="150px" height="120px" src="/assets/logo.png" alt="">
+        </a>
       <% else %>
-        <a class="col navbar-brand" href="/"><span>Snow</span></a>
+        <a class="col navbar-brand" href="/">
+          <img width="150px" height="120px" src="/assets/logo.png" alt="">
+        </a>
       <% end %>
 
       <% if member_signed_in? %>
@@ -20,6 +24,9 @@
           <ul class="navbar-nav ml-auto mb-2">
           <% if member_signed_in? %>
             <li class="text-center mx-2">
+              <%= link_to "トップ", root_path,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
+            </li>
+            <li class="text-center mx-2">
               <%= link_to "マイページ", member_path(current_member),class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
             </li>
             <li class="text-center mx-2">
@@ -33,6 +40,9 @@
             </li>
 
           <% elsif admin_signed_in? %>
+            <li class="text-center mx-2">
+              <%= link_to "トップ", admin_path,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
+            </li>
             <li class="text-center mx-2">
               <%= link_to "会員一覧", admin_members_path,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
             </li>
@@ -50,6 +60,9 @@
             </li>
 
           <% else %>
+            <li class="text-center mx-2">
+              <%= link_to "トップ", root_path,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
+            </li>
             <li class="text-center mx-2">
               <%= link_to "概要",  about_path,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
             </li>

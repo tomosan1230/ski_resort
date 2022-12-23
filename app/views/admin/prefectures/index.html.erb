@@ -1,15 +1,19 @@
-<!--%= render '/layouts/errors', obj: @prefecture %>-->
-<div class="row">
-    <h3 class="col-3 text-center">都道府県一覧・追加</h3>
+<%= render '/layouts/errors', obj: @prefecture %>
+
+<div class="text-center mb-5">
+  <h3>都道府県一覧・追加</h3>
 </div>
-<div class="ml-5">
+
+<div class="text-center">
 <%= form_with model: [:admin, @prefecture], local: true do |f| %>
-  <div class="row">
-    <div class="col-2 col-form-label font-weight-bold">都道府県名</div>
-    <div class="col-3">
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: 'ジャンル名' %>
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-form-label">
+      <%= f.label :prefecture, "都道府県名" %>
     </div>
-    <div class="col-2">
+    <div class="col-md-3">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+    </div>
+    <div class="col-md-2">
       <%= f.submit "新規登録",class: "btn btn-success" %>
     </div>
   </div>
