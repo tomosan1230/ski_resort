@@ -1,49 +1,45 @@
-<!--%= render '/layouts/errors', obj: @prefecture %>-->
-<div class="row">
-    <h3 class="col-3 text-center">都道府県一覧・追加</h3>
+<%= render '/layouts/errors', obj: @prefecture %>
+
+<div class="text-center mb-5">
+  <h3>都道府県一覧・追加</h3>
 </div>
-<div class="ml-5">
+
+<div class="text-center mb-5">
 <%= form_with model: [:admin, @prefecture], local: true do |f| %>
-  <div class="row">
-    <div class="col-2 col-form-label font-weight-bold">都道府県名</div>
-    <div class="col-3">
-      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: 'ジャンル名' %>
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-form-label">
+      <%= f.label :prefecture, "都道府県名" %>
     </div>
-    <div class="col-2">
+    <div class="col-md-3">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+    </div>
+    <div class="col-md-2">
       <%= f.submit "新規登録",class: "btn btn-success" %>
     </div>
   </div>
     <% end %>
 </div>
 
-<div class="row">
-  <div class="col-11 mt-3">
-    <div class="row">
-      <div class="col-5">
-        <table class="table table-hover table-inverse">
-          <thead class="table-secondary">
-            <tr>
-              <th>都道府県</th>
-                <th colspan="3"></th>
-              </tr>
-          </thead>
-          <tbody>
-            <% @prefectures.each do |prefecture| %>
-            <tr>
-              <td>
-                <%= prefecture.name %>
-              </td>
-              <td>
-                <%= link_to "編集する", edit_admin_prefecture_path(prefecture.id), class: "btn btn-success" %>
-              </td>
-              <td>
-                <%= link_to "削除する", admin_prefecture_path(prefecture.id), class: "btn btn-danger", method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
-              </td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</div
+<div class="text-center">
+<table class="table table-bordered col-md-5 mx-auto">
+  <thead class="thead-light">
+    <tr>
+      <th>都道府県</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prefectures.each do |prefecture| %>
+    <tr>
+      <td>
+        <%= prefecture.name %>
+      </td>
+      <td>
+        <%= link_to "編集する", edit_admin_prefecture_path(prefecture.id), class: "btn btn-success" %>
+        <%= link_to "削除する", admin_prefecture_path(prefecture.id), class: "btn btn-danger", method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

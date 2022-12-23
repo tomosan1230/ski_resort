@@ -3,6 +3,7 @@
     <h4>会員情報編集</h4>
   </div>
 </div>
+<%= render '/layouts/errors', obj: @member %>
 <%= form_with model: @member, url: member_path, method: :patch do |f| %>
 <div class="row mt-5">
   <table>
