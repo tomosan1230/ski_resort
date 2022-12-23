@@ -1,8 +1,10 @@
-<h4 class="mb-4"><%= @member.nick_name %>さんの会員詳細</h4>
-<table class='table table-borderless'>
+<div class="mb-5 text-center">
+  <h4><%= @member.nick_name %>さんの会員詳細</h4>
+
+<table class='table table-borderless mx-auto'>
   <tr>
-	  <td>会員ID</td>
-	  <td><%= @member.id %></td>
+	  <td class="col-5">会員ID</td>
+	  <td class="col-5"><%= @member.id %></td>
   </tr>
   <tr>
 	  <td>ニックネーム</td>
@@ -22,11 +24,9 @@
       <% end %>
 	  </td>
   </tr>
-  <tr>
-	  <td></td>
-	  <td>
-	    <%= link_to "編集する", edit_admin_member_path, class: "btn btn-success mr-5" %>
-	    <%= link_to "レビュー一覧", admin_reviews_path,class: 'btn btn-primary' %>
-	  </td>
-  </tr>
 </table>
+
+	    <%= link_to "編集する", edit_admin_member_path, class: "mt-5 btn btn-success" %>
+
+
+</div>

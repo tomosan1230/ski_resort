@@ -14,8 +14,9 @@
   <body class="d-flex flex-column h-100"  style="background: url('<%= asset_path('snow1.jpg') %>'); background-size: 100% 100%;">
     <%= render "layouts/header" %>
     <main>
-      <p id="notice"><%= notice %></p>
       <div class="container justify-content-center p-md-5">
+        <p class="alert"><%= alert %></p>
+        <p id="notice"><%= notice %></p>
         <%= yield %>
       </div>
     </main>

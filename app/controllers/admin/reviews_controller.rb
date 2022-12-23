@@ -1,6 +1,8 @@
 class Admin::ReviewsController < ApplicationController
+  before_action :authenticate_admin!
+
   def index
-    @reviews = Review.page(params[:page]).per(6)
+    @reviews = Review.page(params[:page]).per(10)
   end
 
   def destroy
