@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     case resource
       when Member
-        root_path
+        member_path(current_member)
       when Admin
-        admin_path
+        admin_members_path
     end
   end
 

@@ -7,10 +7,10 @@ class Admin::ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    @review.member_id = current_member.id
+    @review.member_id = @review.member.id
     @review.resort_id = params[:resort_id]
     if @review.destroy
-      redirect_to resort_path, notice: "You have created review successfully."
+      redirect_to admin_reviews_path, notice: "レビューを削除しました"
     else
       render 'show'
     end

@@ -1,5 +1,6 @@
 class Public::ReviewsController < ApplicationController
   before_action :authenticate_member!
+  before_action :ensure_guest_user, only: [:new]
 
   def new
     @review = Review.new
@@ -52,6 +53,13 @@ class Public::ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:title, :body, :the_day, :rate)
+  end
+
+  def ensure_guest_user
+    @member = current_member
+    if @member.nick_name == "guestuser"
+      redirect_to member_path(current_member) , notice: 'ゲストユーザーはレビュー作成画面へ遷移できません。'
+    end
   end
 
 end
