@@ -16,4 +16,12 @@ class Member < ApplicationRecord
     super && (is_deleted == false)
   end
 
+
+  def self.guest
+    find_or_create_by!(nick_name: 'guestuser' ,email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      user.nick_name = "guestuser"
+    end
+  end
+
 end
