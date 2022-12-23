@@ -1,15 +1,9 @@
-<header class="border-bottom border-4 bg-header">
+<header class="border-bottom border-3 bg-header">
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-      <% if admin_signed_in? %>
-        <a class="col navbar-brand" href="/admin">
-          <img width="150px" height="120px" src="/assets/logo.png" alt="">
-        </a>
-      <% else %>
-        <a class="col navbar-brand" href="/">
-          <img width="150px" height="120px" src="/assets/logo.png" alt="">
-        </a>
-      <% end %>
+      <a class="navbar-brand" href="/">
+        <%= video_tag("/videos/logo.mp4", autoplay: :true, muted: :true, width: "90", class: 'video-content') %>
+      </a>
 
       <% if member_signed_in? %>
         <p class="col mb-0">ようこそ<%= current_member.nick_name %>さん</p>
@@ -76,7 +70,7 @@
           </ul>
         </div>
 
-        <div class="d-flex flex-row pt-2 border-top">
+        <div class="d-flex flex-row pt-2 border-top justify-content-center">
           <%= form_with url: search_path, local: true, method: :get do |f| %>
             <%= f.text_field :content, placeholder: 'スキー場検索' %>
             <%= button_tag type: "submit", class: 'btn-sm btn-primary' do %>

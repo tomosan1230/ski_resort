@@ -1,41 +1,40 @@
-<div class="col text-center mb-5">
+<div class="text-center mb-5">
   <h3>レビュー一覧</h3>
 </div>
 
-<div class="col">
-  <table class="table table-bordered">
-    <thead class="thead-light">
-      <tr>
-        <th>投稿者</th>
-        <th>評価</th>
-        <th>タイトル</th>
-        <th>内容</th>
-        <th>行った日</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @reviews.each do |review| %>
-      <tr>
-        <td><%= review.member.nick_name %></td>
-        <td>
-          <%= render "public/reviews/rate", review: review %>
-        </td>
-        <td><%= review.title %></td>
-        <td>
-          <%= review.body %>
-        </td>
-        <td>
-          <%= review.the_day.strftime('%Y/%m/%d') %>
-        </td>
-        <td class="text-center">
-        <%= link_to "削除する", admin_review_path(review), method: :delete, class: "btn btn-danger", data: {confirm: "削除します。よろしいですか？"} %>
-        </td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th>投稿者</th>
+      <th>評価</th>
+      <th>タイトル</th>
+      <th>内容</th>
+      <th>行った日</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @reviews.each do |review| %>
+    <tr>
+      <td><%= review.member.nick_name %></td>
+      <td>
+        <%= render "public/reviews/rate", review: review %>
+      </td>
+      <td><%= review.title %></td>
+      <td>
+        <%= review.body %>
+      </td>
+      <td>
+        <%= review.the_day.strftime('%Y/%m/%d') %>
+      </td>
+      <td class="text-center">
+      <%= link_to "削除する", admin_review_path(review), method: :delete, class: "btn btn-danger", data: {confirm: "削除します。よろしいですか？"} %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
 <div class="d-flex justify-content-center">
   <%= paginate @reviews %>
 </div>
