@@ -2,7 +2,15 @@ class Admin::ReviewsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @reviews = Review.page(params[:page]).per(10)
+    if params[:latest]
+      @reviews = Review.latest.page(params[:page]).per(10)
+    elsif params[:old]
+      @reviews = Review.old.page(params[:page]).per(10)
+    elsif params[:rate_count]
+      @reviews = Review.rate_count.page(params[:page]).per(10)
+    else
+      @reviews = Review.page(params[:page]).per(10)
+    end
   end
 
   def destroy
