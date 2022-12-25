@@ -1,0 +1,31 @@
+<div class="d-flex flex-column">
+  <div class="text-center">
+    <h4>マイページ</h4>
+  </div>
+
+
+  <div class="row mt-5">
+    <table class="table table-bordered">
+      <tr>
+        <th style="width: 40%">ニックネーム</td>
+        <td style="width: 40%"><%= @member.nick_name %></td>
+      </tr>
+      <tr>
+        <th style="width: 40%">メールアドレス</td>
+        <td style="width: 40%"><%= @member.email %></td>
+      </tr>
+    </table>
+</div>
+
+  <% if @member.nick_name != "guestuser" %>
+  <div class="row mt-3">
+    <div class="col-md-6">
+      <h4>登録情報</h4>
+    </div>
+    <div class="col-md-6">
+      <%= link_to "編集する", edit_member_path, class: "btn btn-success" %>
+    </div>
+  </div>
+  <% end %>
+
+</div>

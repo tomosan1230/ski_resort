@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-2">
+  <%= render 'prefecture', prefectures: @prefectures %>
+  </div>
+  <div class="col-md-10">
+    <div class="d-flex flex-row">
+      <h3>スキー場一覧</h3>
+      <p class="d-flex align-resorts-end m-2">(全<%= @resorts.count %>件)</p>
+    </div>
+    <%= render 'index', resorts: @resorts %>
+    <div class="row">
+      <div class="col-11 d-flex justify-content-center">
+        <%= paginate @resorts %>
+      </div>
+    </div>
+  </div>
+</div

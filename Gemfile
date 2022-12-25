@@ -63,3 +63,8 @@ end
 gem "net-smtp"
 gem "net-pop"
 gem "net-imap"
+
+gem "devise"
+gem 'pry-rails'
+gem 'kaminari','~> 1.2.1'
+gem 'rails-i18n'

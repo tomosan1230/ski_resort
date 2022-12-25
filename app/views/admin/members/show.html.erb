@@ -1,0 +1,32 @@
+<div class="mb-5 text-center">
+  <h4><%= @member.nick_name %>さんの会員詳細</h4>
+
+<table class='table table-borderless mx-auto'>
+  <tr>
+	  <td class="col-5">会員ID</td>
+	  <td class="col-5"><%= @member.id %></td>
+  </tr>
+  <tr>
+	  <td>ニックネーム</td>
+	  <td><%= @member.nick_name %></td>
+  </tr>
+  <tr>
+    <td>メールアドレス</td>
+    <td><%= @member.email %></td>
+  </tr>
+  <tr>
+	  <td>会員ステータス</td>
+	  <td>
+	    <% if @member.is_deleted == false %>
+        <span class="text-success"><strong>有効</strong></span>
+      <% elsif %>
+        <span class="text-secondary"><strong>退会済</strong></span>
+      <% end %>
+	  </td>
+  </tr>
+</table>
+
+	    <%= link_to "編集する", edit_admin_member_path, class: "mt-5 btn btn-success" %>
+
+
+</div>

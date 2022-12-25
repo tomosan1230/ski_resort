@@ -1,0 +1,42 @@
+<div class="row mb-4">
+  <h3 class="col-md-2 text-center">商品詳細</h3>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <% if @resort.image.present? %>
+      <%= image_tag @resort.image, class: "img-fluid" %>
+    <% else %>
+      <%= image_tag 'no_image.jpg', class: "img-fluid" %>
+    <% end %>
+  </div>
+
+  <div class="col-md-8">
+    <table class="table">
+      <tr>
+        <th class="col-md-4">スキー場名</th>
+        <td><%= @resort.name %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">特徴</th>
+        <td><%= @resort.feature %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">都道府県</th>
+        <td><%= @resort.prefecture.name %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">郵便番号</th>
+        <td><%= @resort.postal_code %></td>
+      </tr>
+      <tr>
+        <th class="col-md-4">住所</th>
+        <td><%= @resort.address %></td>
+      </tr>
+      </table>
+
+      <%= link_to '編集する', edit_admin_resort_path(@resort.id), class: 'btn btn-success btn-lg mr-5' %>
+      <%= link_to "削除する", admin_resort_path(@resort.id), class: "btn btn-danger btn-lg", method: :delete, data: {confirm: "削除します。よろしいですか？"} %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<%= render '/layouts/errors', obj: @resort %>
+<div class="text-center mb-5">
+  <h3>スキー場新規登録</h3>
+</div>
+<%= render 'form', resort: @resort, prefectures: Prefecture.all %>
+
+
