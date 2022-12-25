@@ -33,7 +33,7 @@
               <%= link_to "ログアウト", destroy_member_session_path,method: :delete,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
             </li>
 
-          <% elsif admin_signed_in? %>
+          <% elsif admin_signed_in? %>j
             <li class="text-center mx-2">
               <%= link_to "会員一覧", admin_members_path,class: 'nav-link text-dark border rounded rounded-3 bg-white' %>
             </li>
