@@ -1,0 +1,18 @@
+<div id="rate_<%= review.id %>"></div>
+
+
+
+<script>
+// $(document).on('turbolinks:load', function() {
+    var raty_<%= review.id %> = document.getElementById('rate_<%= review.id %>');
+    rate_<%= review.id %>.innerHTML = ""
+    var option_<%= review.id %> = {
+        starOn: "<%= asset_path('star-on.png') %>",
+        starOff: "<%= asset_path('star-off.png') %>",
+        starHalf: "<%= asset_path('star-half.png') %>",
+        score: "<%= review.rate %>",
+        readOnly: true,
+      };
+    raty(raty_<%= review.id %> ,option_<%= review.id %>);
+// });
+</script>

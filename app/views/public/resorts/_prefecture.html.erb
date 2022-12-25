@@ -1,0 +1,12 @@
+<div class="border-top border-3 border-dark">
+  <div class="text-center">
+    <strong>都道府県検索</strong>
+  </div>
+  <div class="d-flex flex-wrap border-top border-dark">
+    <% prefectures.each do |prefecture| %>
+      <p class="m-3">
+        <%= link_to prefecture.name, search_path(name: prefecture.name, word: prefecture.id, model: "prefecture", method: "perfect"), class: 'text-dark' %>
+      </p>
+    <% end %>
+  </div>
+</div>
