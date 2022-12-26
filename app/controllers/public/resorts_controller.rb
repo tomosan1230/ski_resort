@@ -10,6 +10,15 @@ class Public::ResortsController < ApplicationController
     @resort = Resort.find(params[:id])
     @prefectures = Prefecture.all
     @reviews = @resort.reviews
+    if params[:latest]
+      @reviews = @resort.reviews.latest
+    elsif params[:old]
+      @reviews = @resort.reviews.old
+    elsif params[:rate_count]
+      @reviews = @resort.reviews.rate_count
+    else
+      @reviews = @resort.reviews
+    end
   end
 
   private
