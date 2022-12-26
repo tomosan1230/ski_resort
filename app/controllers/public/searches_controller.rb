@@ -10,6 +10,6 @@ class Public::SearchesController < ApplicationController
     else
       @resorts = Resort.page(params[:page]).per(8).search(params[:content])
     end
-      @prefectures = Prefecture.all
+    @prefectures = Prefecture.all
   end
 end

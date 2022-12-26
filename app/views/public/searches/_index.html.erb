@@ -4,7 +4,7 @@
       <div class="row mb-4">
         <div class="col-6">
           <% if resort.image.present? %>
-            <%= image_tag resort.image, size: '200x120', class: 'img-fluid' %>
+            <%= image_tag resort.image, class: 'img-fluid' %>
           <% else %>
             <%= image_tag 'no_image.jpg', class: 'img-fluid' %>
           <% end %>
