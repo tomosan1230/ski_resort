@@ -39,11 +39,11 @@ class Public::ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
-    @review.member_id = current_member.id
-    @review.resort_id = params[:resort_id]
-    if @review.destroy
-      redirect_to resort_path, notice: "You have created review successfully."
+    review = Review.find(params[:id])
+    review.member_id = current_member.id
+    review.resort_id = params[:resort_id]
+    if review.destroy
+      redirect_to resort_path(params[:resort_id]), notice: "レビューを削除しました"
     else
       render 'show'
     end
