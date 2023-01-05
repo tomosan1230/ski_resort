@@ -2,6 +2,7 @@ class Resort < ApplicationRecord
   belongs_to :prefecture
   has_many :reviews
   has_one_attached :image
+  is_impressionable counter_cache: true
 
 
   validates :name, presence: true

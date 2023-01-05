@@ -10,6 +10,7 @@ class Public::ResortsController < ApplicationController
     @resort = Resort.find(params[:id])
     @prefectures = Prefecture.all
     @reviews = @resort.reviews
+    impressionist(@resort, nil, unique: [:member_id])
   end
 
   private
