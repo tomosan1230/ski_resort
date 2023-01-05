@@ -2,11 +2,7 @@ class Resort < ApplicationRecord
   belongs_to :prefecture
   has_many :reviews
   has_one_attached :image
-<<<<<<< HEAD
   is_impressionable counter_cache: true
-=======
-  has_many :view_counts, dependent: :destroy
->>>>>>> origin/develop
 
 
   validates :name, presence: true

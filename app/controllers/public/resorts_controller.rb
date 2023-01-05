@@ -10,9 +10,8 @@ class Public::ResortsController < ApplicationController
     @resort = Resort.find(params[:id])
     @prefectures = Prefecture.all
     @reviews = @resort.reviews
-<<<<<<< HEAD
     impressionist(@resort, nil, unique: [:member_id])
-=======
+
     if params[:latest]
       @reviews = @resort.reviews.latest
     elsif params[:old]
@@ -22,7 +21,6 @@ class Public::ResortsController < ApplicationController
     else
       @reviews = @resort.reviews
     end
->>>>>>> origin/develop
   end
 
   private
