@@ -1,0 +1,26 @@
+ja:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'バリデーションに失敗しました: %{errors}'
+    attributes:
+      member:
+        nickname: ニックネーム
+      review:
+        title: タイトル
+        body: 内容
+        the_day: 日付
+        rate: 評価
+      prefecture:
+        name: 都道府県名
+      resort:
+        name: スキー場名
+        feature: 特徴
+        prefecture: 都道府県
+        prefecture_id: 都道府県
+        postal_code: 郵便番号
+        address: 住所
+  activemodel:   # Formオブジェクトを用いた場合
+     attributes:
+       order_object:
+         post_code: 郵便番号
