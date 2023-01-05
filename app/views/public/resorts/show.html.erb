@@ -24,6 +24,11 @@
 
 
     <div class="col">
+      <div class="text-right mb-3">
+        <%= link_to '新しい順', resort_path(latest: "true") %>
+        |<%= link_to '古い順', resort_path(old: "true") %>
+        |<%= link_to '評価の高い順', resort_path(rate_count: "true") %>
+      </div>
       <table class="table table-bordered">
         <thead class="thead-light">
           <tr>
@@ -53,7 +58,7 @@
 
             <% if review.member.id == current_member.id %>
             <td class="text-center">
-            <%= link_to "削除する", resort_review_path(review), method: :delete, class: "btn btn-danger", data: {confirm: "削除します。よろしいですか？"} %>
+            <%= link_to "削除する", resort_review_path(review.resort, review), method: :delete, class: "btn btn-danger", data: {confirm: "削除します。よろしいですか？"} %>
             </td>
             <% end %>
           </tr>

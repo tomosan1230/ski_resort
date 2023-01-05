@@ -1,0 +1,19 @@
+<div class="d-flex flex-wrap">
+  <% resorts.each do |resort| %>
+    <%= link_to resort_path(resort.id) do %>
+      <div class="row mb-4">
+        <div class="col-6">
+          <% if resort.image.present? %>
+            <%= image_tag resort.image, class: 'img-fluid' %>
+          <% else %>
+            <%= image_tag 'no_image.jpg', class: 'img-fluid' %>
+          <% end %>
+        </div>
+        <div class="col-6">
+          <p class="text-dark"><strong><%= resort.name %></strong></p>
+          <p class="text-dark"><strong><%= resort.feature %></strong></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
