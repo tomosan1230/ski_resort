@@ -2,6 +2,7 @@ class Resort < ApplicationRecord
   belongs_to :prefecture
   has_many :reviews
   has_one_attached :image
+  has_many :view_counts, dependent: :destroy
 
 
   validates :name, presence: true
