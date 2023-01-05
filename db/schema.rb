@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_05_163920) do
+ActiveRecord::Schema.define(version: 2023_01_05_171504) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2023_01_05_163920) do
   create_table "impressions", force: :cascade do |t|
     t.string "impressionable_type"
     t.integer "impressionable_id"
-    t.integer "member_id"
+    t.integer "user_id"
     t.string "controller_name"
     t.string "action_name"
     t.string "view_name"
@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2023_01_05_163920) do
     t.index ["impressionable_type", "impressionable_id", "request_hash"], name: "poly_request_index"
     t.index ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
     t.index ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
-    t.index ["member_id"], name: "index_impressions_on_member_id"
+    t.index ["user_id"], name: "index_impressions_on_user_id"
   end
 
   create_table "members", force: :cascade do |t|
