@@ -5,7 +5,6 @@ class Member < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :reviews, dependent: :destroy
-  has_many :view_counts, dependent: :destroy
 
   with_options presence: true do
     validates :nick_name, length: { minimum: 2, maximum: 10 }
