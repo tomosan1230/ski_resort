@@ -5,6 +5,7 @@
       <th>スキー場名</th>
       <th>特徴</th>
       <th>都道府県</th>
+      <th>閲覧数</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
         </td>
         <td><%= resort.feature %></td>
         <td><%= resort.prefecture.name %></td>
+        <td><%= resort.impressions_count %></td>
       </tr>
     <% end %>
   </tbody>
