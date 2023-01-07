@@ -12,7 +12,6 @@ class Public::ResortsController < ApplicationController
     @prefectures = Prefecture.all
     @reviews = @resort.reviews
     impressionist(@resort, nil, unique: [:session_hash])
-
     if params[:latest]
       @reviews = @resort.reviews.latest
     elsif params[:old]
