@@ -1,5 +1,6 @@
 class Public::ResortsController < ApplicationController
     before_action :authenticate_member!
+    impressionist :actions => [:show]
 
   def index
     @resorts = Resort.page(params[:page]).per(6)
@@ -10,6 +11,7 @@ class Public::ResortsController < ApplicationController
     @resort = Resort.find(params[:id])
     @prefectures = Prefecture.all
     @reviews = @resort.reviews
+    impressionist(@resort, nil, unique: [:session_hash])
     if params[:latest]
       @reviews = @resort.reviews.latest
     elsif params[:old]

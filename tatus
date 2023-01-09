@@ -1,0 +1,181 @@
+*   [33m3479c55[m[33m ([m[1;31morigin/main[m[33m)[m Merge pull request #33 from tomosan1230/develop
+[31m|[m[32m\[m  
+[31m|[m *   [33mdb71cd7[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m Merge pull request #32 from tomosan1230/viewcount
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m *   [33m147f84b[m[33m ([m[1;31morigin/viewcount[m[33m, [m[1;32mviewcount[m[33m)[m Merge remote-tracking branch 'origin/develop' into viewcount
+[31m|[m [33m|[m [35m|[m[33m\[m  
+[31m|[m [33m|[m [35m|[m[33m/[m  
+[31m|[m [33m|[m[33m/[m[35m|[m   
+[31m|[m * [35m|[m   [33m7e86dea[m Merge pull request #31 from tomosan1230/viewcount
+[31m|[m [1;31m|[m[1;32m\[m [35m\[m  
+[31m|[m [1;31m|[m * [35m\[m   [33m5ccf19c[m Merge branch 'develop' into viewcount
+[31m|[m [1;31m|[m [1;33m|[m[1;31m\[m [35m\[m  
+[31m|[m [1;31m|[m [1;33m|[m[1;31m/[m [35m/[m  
+[31m|[m [1;31m|[m[1;31m/[m[1;33m|[m [35m|[m   
+[31m|[m [1;31m|[m [1;33m|[m * [33m706f3f9[m [Add]admin/resort/indexに閲覧数追加
+[31m|[m [1;31m|[m [1;33m|[m[1;33m/[m  
+[31m|[m [1;31m|[m * [33m7e2f8d1[m [Add]閲覧数
+[31m|[m [1;31m|[m *   [33me62cea5[m [Update]conflict修正
+[31m|[m [1;31m|[m [1;35m|[m[1;36m\[m  
+[31m|[m [1;31m|[m * [1;36m\[m   [33m6acaac3[m [Start]閲覧数
+[31m|[m [1;31m|[m [31m|[m[32m\[m [1;36m\[m  
+* [1;31m|[m [31m|[m [32m|[m [1;36m|[m [33m167a91f[m Merge pull request #30 from tomosan1230/develop
+[32m|[m[1;31m\[m[1;31m|[m [31m|[m [32m|[m [1;36m|[m 
+[32m|[m [1;31m|[m[32m_[m[31m|[m[32m/[m [1;36m/[m  
+[32m|[m[32m/[m[1;31m|[m [31m|[m [1;36m|[m   
+[32m|[m * [31m|[m [1;36m|[m [33m13089c8[m 修正
+[32m|[m [1;36m|[m [31m|[m[1;36m/[m  
+[32m|[m [1;36m|[m[1;36m/[m[31m|[m   
+[32m|[m * [31m|[m [33m4c2df95[m Merge pull request #29 from tomosan1230/viewcount
+[32m|[m[32m/[m[36m|[m [31m|[m 
+[32m|[m * [31m|[m   [33mf692619[m Merge branch 'develop' into viewcount
+[32m|[m [31m|[m[32m\[m [31m\[m  
+[32m|[m [31m|[m[32m/[m [31m/[m  
+[32m|[m[32m/[m[31m|[m [31m/[m   
+[32m|[m [31m|[m[31m/[m    
+[32m|[m * [33mcd0a4b2[m [Start]閲覧数
+[32m|[m [1;32m|[m * [33m87ce647[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m Revert "[Start]閲覧数"
+[32m|[m [1;32m|[m[32m/[m  
+[32m|[m[32m/[m[1;32m|[m   
+* [1;32m|[m [33mb904b12[m [Start]閲覧数
+* [1;32m|[m [33m769c7cb[m [Update]review/delete
+* [1;32m|[m [33m5e264eb[m [Update]search
+* [1;32m|[m [33me558094[m [Add]並び替え
+* [1;32m|[m [33m7a54bf4[m [update]seed
+* [1;32m|[m [33mb448122[m [update]
+* [1;32m|[m [33md56dcf9[m [Update]image
+* [1;32m|[m [33m22bd9db[m [upload] uncommited files
+* [1;32m|[m [33m6180a56[m [Update]
+* [1;32m|[m [33ma064395[m Merge pull request #28 from tomosan1230/develop
+[1;34m|[m[1;32m\[m[1;32m|[m 
+[1;34m|[m *   [33mfa32d8f[m[33m ([m[1;32mlayout[m[33m)[m Merge pull request #27 from tomosan1230/layout
+[1;34m|[m [1;36m|[m[31m\[m  
+[1;34m|[m [1;36m|[m * [33m6115efc[m[33m ([m[1;31morigin/layout[m[33m)[m [Update]
+[1;34m|[m [1;36m|[m * [33m3c2e96e[m [Delete]admin/top
+[1;34m|[m [1;36m|[m[1;36m/[m  
+[1;34m|[m *   [33m203f325[m Merge pull request #26 from tomosan1230/home
+[1;34m|[m [32m|[m[33m\[m  
+[1;34m|[m [32m|[m * [33m9b3133b[m[33m ([m[1;31morigin/home[m[33m, [m[1;32mhome[m[33m)[m [Add]guest
+[1;34m|[m [32m|[m *   [33md5fcdf2[m [Add]guest
+[1;34m|[m [32m|[m [34m|[m[32m\[m  
+[1;34m|[m [32m|[m [34m|[m[32m/[m  
+[1;34m|[m [32m|[m[32m/[m[34m|[m   
+[1;34m|[m * [34m|[m   [33mda43f49[m Merge pull request #25 from tomosan1230/layout
+[1;34m|[m [36m|[m[1;31m\[m [34m\[m  
+[1;34m|[m [36m|[m * [34m|[m [33me1bfbdb[m [Update]top/about
+[1;34m|[m * [1;31m|[m [34m|[m [33m1100f91[m Merge pull request #24 from tomosan1230/layout
+[1;34m|[m [1;32m|[m[1;31m\[m[1;31m|[m [34m|[m 
+[1;34m|[m [1;32m|[m * [34m|[m [33m5c814ef[m [Update]prefecture
+[1;34m|[m [1;32m|[m * [34m|[m [33mb9d17cc[m [Add]Admin/review
+[1;34m|[m [1;32m|[m * [34m|[m [33m849f2b3[m [Update]header
+[1;34m|[m [1;32m|[m[1;32m/[m [34m/[m  
+[1;34m|[m [1;32m|[m * [33m4bae3af[m [Add]guestuser
+[1;34m|[m [1;32m|[m[1;32m/[m  
+[1;34m|[m *   [33mdfb7836[m Merge pull request #23 from tomosan1230/review
+[1;34m|[m [1;34m|[m[1;35m\[m  
+[1;34m|[m [1;34m|[m * [33mab34c80[m[33m ([m[1;31morigin/review[m[33m, [m[1;32mreview[m[33m)[m [Add]review/delete
+[1;34m|[m [1;34m|[m[1;34m/[m  
+[1;34m|[m *   [33m1b8e481[m Merge pull request #22 from tomosan1230/layout
+[1;34m|[m [1;36m|[m[31m\[m  
+[1;34m|[m [1;36m|[m * [33mb61d1f2[m [Update]public/member
+[1;34m|[m [1;36m|[m * [33m8249c78[m [Update]footer
+[1;34m|[m [1;36m|[m * [33m473f8e5[m [Update]resort
+[1;34m|[m [1;36m|[m * [33m688666c[m [Update]header
+[1;34m|[m [1;36m|[m[1;36m/[m  
+[1;34m|[m *   [33me393b2b[m Merge pull request #21 from tomosan1230/seed
+[1;34m|[m [32m|[m[33m\[m  
+[1;34m|[m [32m|[m * [33m52ec532[m[33m ([m[1;31morigin/seed[m[33m, [m[1;32mseed[m[33m)[m [Add]seed
+[1;34m|[m [32m|[m[32m/[m  
+[1;34m|[m *   [33m3aa1b9f[m Merge pull request #20 from tomosan1230/search
+[1;34m|[m [34m|[m[35m\[m  
+[1;34m|[m [34m|[m * [33m902476f[m[33m ([m[1;31morigin/search[m[33m, [m[1;32msearch[m[33m)[m [Add]search
+[1;34m|[m [34m|[m[34m/[m  
+[1;34m|[m *   [33m1060781[m Merge pull request #19 from tomosan1230/review
+[1;34m|[m [36m|[m[1;31m\[m  
+[1;34m|[m [36m|[m * [33m0daeca1[m [Update]review/edit
+[1;34m|[m [36m|[m * [33ma9f2e1d[m [Add]resort/showに表示
+[1;34m|[m [36m|[m[36m/[m  
+[1;34m|[m *   [33md7233c2[m Merge pull request #18 from tomosan1230/search
+[1;34m|[m [1;32m|[m[1;33m\[m  
+[1;34m|[m [1;32m|[m * [33m8c10cd2[m [Add]search
+[1;34m|[m [1;32m|[m[1;32m/[m  
+[1;34m|[m *   [33ma3e8f72[m Merge pull request #17 from tomosan1230/review
+[1;34m|[m [1;34m|[m[1;35m\[m  
+[1;34m|[m [1;34m|[m * [33m3106626[m [Update]review
+[1;34m|[m [1;34m|[m * [33m0fc945a[m [Update]review/new
+[1;34m|[m [1;34m|[m * [33mc196763[m [Add]review/new
+[1;34m|[m [1;34m|[m[1;34m/[m  
+[1;34m|[m *   [33m415242c[m Merge pull request #16 from tomosan1230/home
+[1;34m|[m [1;36m|[m[31m\[m  
+[1;34m|[m [1;36m|[m * [33m5d3ec6f[m [Update]header/col-3→col
+[1;34m|[m [1;36m|[m[1;36m/[m  
+[1;34m|[m *   [33mdacedaf[m Merge pull request #15 from tomosan1230/layout
+[1;34m|[m [32m|[m[33m\[m  
+[1;34m|[m [32m|[m * [33mb20bf61[m [Update]Admin/resort
+[1;34m|[m [32m|[m * [33m0396f51[m [Update]Admin/member prefecture
+[1;34m|[m [32m|[m * [33m312bb3b[m [Update]Admin/member prefecture
+[1;34m|[m * [33m|[m [33m08fdc46[m Merge pull request #14 from tomosan1230/layout
+[1;34m|[m [34m|[m[33m\[m[33m|[m 
+[1;34m|[m [34m|[m * [33m4541f3b[m [Update]Public/member resort
+[1;34m|[m [34m|[m[34m/[m  
+[1;34m|[m *   [33mf0e5565[m Merge pull request #13 from tomosan1230/system
+[1;34m|[m [36m|[m[1;31m\[m  
+[1;34m|[m [36m|[m [1;31m|[m * [33ma5b11ef[m[33m ([m[1;32msystem[m[33m)[m Merge remote-tracking branch 'origin/develop' into system
+[1;34m|[m [36m|[m [1;31m|[m[1;31m/[m[36m|[m 
+[1;34m|[m [36m|[m [1;31m|[m[36m/[m  
+[1;34m|[m [36m|[m[36m/[m[1;31m|[m   
+[1;34m|[m * [1;31m|[m   [33m1caf221[m Merge pull request #12 from tomosan1230/resort
+[1;34m|[m [1;34m|[m[1;35m\[m [1;31m\[m  
+[1;34m|[m [1;34m|[m * [1;31m|[m [33m1ab89cb[m[33m ([m[1;31morigin/resort[m[33m, [m[1;32mresort[m[33m)[m [Add]Public/resort
+[1;34m|[m [1;34m|[m[1;34m/[m [1;31m/[m  
+[1;34m|[m * [1;31m|[m   [33m9f676da[m[33m ([m[1;32mmember[m[33m)[m Merge pull request #11 from tomosan1230/member
+[1;34m|[m [1;36m|[m[31m\[m [1;31m\[m  
+[1;34m|[m [1;36m|[m * [1;31m|[m [33m5186699[m[33m ([m[1;31morigin/member[m[33m)[m [Add]Public/resort
+[1;34m|[m [1;36m|[m * [1;31m|[m [33mc760f9f[m [Finish]Public/Member
+[1;34m|[m [1;36m|[m * [1;31m|[m [33m0bdd253[m [Finish]Admin/Member
+[1;34m|[m [1;36m|[m[1;36m/[m [1;31m/[m  
+[1;34m|[m * [1;31m|[m   [33me3cc5d0[m[33m ([m[1;32mprefecture[m[33m)[m Merge pull request #10 from tomosan1230/prefecture
+[1;34m|[m [32m|[m[33m\[m [1;31m\[m  
+[1;34m|[m [32m|[m * [1;31m|[m [33mee25d59[m[33m ([m[1;31morigin/prefecture[m[33m)[m [Finish]機能実装
+[1;34m|[m [32m|[m[32m/[m [1;31m/[m  
+[1;34m|[m * [1;31m|[m   [33mb6cd2a9[m Merge pull request #9 from tomosan1230/resort
+[1;34m|[m [34m|[m[35m\[m [1;31m\[m  
+[1;34m|[m [34m|[m * [1;31m|[m [33m8263d66[m [Finish]機能実装
+[1;34m|[m [34m|[m * [1;31m|[m [33m1dc917a[m[33m ([m[1;31morigin/ski_resort[m[33m)[m [Rename]resort
+[1;34m|[m [34m|[m[34m/[m [1;31m/[m  
+[1;34m|[m * [1;31m|[m   [33md00c4c0[m Merge pull request #8 from tomosan1230/system
+[1;34m|[m [36m|[m[1;31m\[m [1;31m\[m  
+[1;34m|[m * [1;31m\[m [1;31m\[m   [33m4168843[m Merge pull request #4 from tomosan1230/ski_resort
+[1;34m|[m [1;32m|[m[1;33m\[m [1;31m\[m [1;31m\[m  
+[1;34m|[m [1;32m|[m * [1;31m|[m [1;31m|[m [33mb74f4d0[m [Add]index
+[1;34m|[m [1;32m|[m[1;32m/[m [1;31m/[m [1;31m/[m  
+[1;34m|[m * [1;31m|[m [1;31m|[m   [33m6c47ab3[m Merge pull request #3 from tomosan1230/home
+[1;34m|[m [1;34m|[m[1;35m\[m [1;31m\[m [1;31m\[m  
+[1;34m|[m [1;34m|[m * [1;31m|[m [1;31m|[m [33m23498c4[m [Update]header
+[1;34m|[m [1;34m|[m * [1;31m|[m [1;31m|[m   [33m6b64a7a[m Merge remote-tracking branch 'origin/develop' into home
+[1;34m|[m [1;34m|[m [1;36m|[m[1;34m\[m [1;31m\[m [1;31m\[m  
+[1;34m|[m [1;34m|[m [1;36m|[m[1;34m/[m [1;31m/[m [1;31m/[m  
+[1;34m|[m [1;34m|[m[1;34m/[m[1;36m|[m [1;31m|[m [1;31m|[m   
+[1;34m|[m * [1;36m|[m [1;31m|[m [1;31m|[m   [33m3853e0a[m Merge pull request #2 from tomosan1230/devise
+[1;34m|[m [32m|[m[33m\[m [1;36m\[m [1;31m\[m [1;31m\[m  
+[1;34m|[m [32m|[m * [1;36m|[m [1;31m|[m [1;31m|[m [33m893e258[m[33m ([m[1;31morigin/devise[m[33m, [m[1;32mdevise[m[33m)[m [Add]nick_name
+[1;34m|[m [32m|[m[32m/[m [1;36m/[m [1;31m/[m [1;31m/[m  
+[1;34m|[m [32m|[m * [1;31m/[m [1;31m/[m [33m5cda5f1[m [Add]header
+[1;34m|[m [32m|[m[32m/[m [1;31m/[m [1;31m/[m  
+[1;34m|[m * [1;31m|[m [1;31m|[m   [33mbe0058a[m Merge pull request #1 from tomosan1230/system
+[1;34m|[m [34m|[m[35m\[m [1;31m\[m [1;31m\[m  
+[1;34m|[m [34m|[m [35m|[m [1;31m|[m * [33m971efae[m[33m ([m[1;31morigin/system[m[33m)[m [Add]Bootstrap
+[1;34m|[m [34m|[m [35m|[m [1;31m|[m[1;31m/[m  
+[1;34m|[m [34m|[m [35m|[m * [33m8b58aaf[m [Add]修正
+[1;34m|[m [34m|[m [35m|[m * [33md0dfb28[m [Add]修正
+[1;34m|[m [34m|[m [35m|[m * [33m089bd65[m [Add]model
+[1;34m|[m [34m|[m [35m|[m[35m/[m  
+[1;34m|[m [34m|[m * [33m7a1551b[m [Finish]routing
+[1;34m|[m [34m|[m * [33md97565a[m [Finish]devise
+[1;34m|[m [34m|[m[34m/[m  
+[1;34m|[m * [33m00dfbd9[m [Add]develop
+[1;34m|[m[1;34m/[m  
+* [33m4990998[m [Update]README.mdの修正
+* [33m2b20d19[m cofig.host.clear記述
+* [33mb2175ba[m deploy setting
+* [33m2f81e9a[m [Start]PF制作
