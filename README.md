@@ -20,7 +20,7 @@
 - 初心者へおすすめのスキー場を探したいとき
 
 ## 設計書
-- ER図:
+- ER図:https://drive.google.com/file/d/1jorxSxj_OmG1_sfOauZhktm_e7c9OenA/view?usp=sharing
 
 ## 開発環境
 - OS：Linux(CentOS)
