@@ -1,3 +1,7 @@
+<% content_for :turbolinks do %>
+  data-turbolinks="false"
+<% end %>
+
 <div class="d-flex flex-column">
   <div class="row mb-5">
     <div class="col-md-4">
@@ -17,8 +21,12 @@
       <div class="mb-4">
         <%= link_to "レビューを書く", new_resort_review_path(resort_id: @resort.id), class: "btn btn-success px-3" %>
       </div>
-
     </div>
+
+
+<%= render "public/resorts/map", resort: @resort %>
+
+
   </div>
 
 

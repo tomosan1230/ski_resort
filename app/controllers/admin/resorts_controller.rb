@@ -20,6 +20,7 @@ class Admin::ResortsController < ApplicationController
 
   def show
     @resort = Resort.find(params[:id])
+    gon.resort = @user
   end
 
   def edit
