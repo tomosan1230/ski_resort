@@ -7,7 +7,7 @@
         <%= image_tag 'no_image.jpg', class: 'img-fluid' %>
       <% end %>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <h3 class="m-2"><%= @resort.name %></h3>
       <h5 class="m-2" style="height:6rem;"><%= @resort.feature %></h5>
       <div class="mb-4">
@@ -19,7 +19,9 @@
       </div>
     </div>
 
-    <%= render "map", resort: @resort %>
+    <div class="col-md-4">
+      <%= render "map", resort: @resort %>
+    </div>
   </div>
 
 

@@ -45,7 +45,7 @@ class Admin::ResortsController < ApplicationController
   private
 
   def resort_params
-    params.require(:resort).permit(:name, :image, :feature, :postal_code, :address, :prefecture_id)
+    params.require(:resort).permit(:name, :image, :feature, :postal_code, :address, :prefecture_id, :latitude, :longitude)
   end
 
 end
