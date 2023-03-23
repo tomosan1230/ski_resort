@@ -96,11 +96,12 @@ GEM
     geocoder (1.8.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    gon (6.4.0)
-      actionpack (>= 3.0.20)
-      i18n (>= 0.7)
-      multi_json
-      request_store (>= 1.0)
+    gmaps4rails (2.1.2)
+    google_maps_service (0.4.2)
+      hurley (~> 0.1)
+      multi_json (~> 1.11)
+      retriable (~> 2.0)
+    hurley (0.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     impressionist (2.0.0)
@@ -197,11 +198,10 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.6.1)
-    request_store (1.5.1)
-      rack (>= 1.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    retriable (2.1.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
@@ -271,7 +271,8 @@ DEPENDENCIES
   devise
   dotenv-rails
   geocoder
-  gon
+  gmaps4rails
+  google_maps_service
   impressionist
   jbuilder (~> 2.7)
   kaminari (~> 1.2.1)

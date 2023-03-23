@@ -1,5 +1,4 @@
 class Resort < ApplicationRecord
-  include Geocoder::Model::ActiveRecord
 
   belongs_to :prefecture
   has_many :reviews
@@ -8,7 +7,7 @@ class Resort < ApplicationRecord
 
   # G-map API
   geocoded_by :address
-  after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }
+  after_validation :geocode
 
   validates :name, presence: true
   validates :feature, presence: true, length: { maximum: 40 }
